@@ -168,14 +168,12 @@ header .navbar ul li a.active::before {
 
   color: #000000;
 }
-
 /* ABOUT ME */
 .about-me {
   padding: 100px 15px;
   background-color: #ffffff;
 }
-.about-me .section-title {
-}
+
 .about-me .section-title h1 {
   display: inline-block;
   font-size: 35px;
