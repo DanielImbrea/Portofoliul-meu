@@ -20,10 +20,11 @@ header {
   position: absolute;
   left: 0px;
   right: 0px;
-  border-bottom: 1px solid #423940;
+  border-bottom: 1px solid white;
   padding: 0px 15px;
   z-index: 10;
-  /* background-color: black; */
+  background-color: rgb(18, 18, 17);
+  box-shadow: 2px 8px 110px 62px black;
 }
 header .row {
   justify-content: space-between;
@@ -90,7 +91,7 @@ header .navbar ul li a.active::before {
 }
 
 /* HOME SECTION  */
-.home { 
+.home {
   min-height: 100vh;
   background-image: url("/home/asd.jpg");
   background-size: cover;
