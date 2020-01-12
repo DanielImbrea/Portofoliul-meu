@@ -20,11 +20,12 @@ header {
   position: absolute;
   left: 0px;
   right: 0px;
+  font-family: "Kalam", cursive;
   border-bottom: 1px solid white;
   padding: 0px 15px;
   z-index: 10;
-  background-color: rgb(18, 18, 17);
-  box-shadow: 2px 8px 110px 62px black;
+  /* background-color: #282828; */
+  box-shadow: 2px 1px 120px 62px black;
 }
 header .row {
   justify-content: space-between;
@@ -36,15 +37,16 @@ header .brand-name a {
   font-weight: 600px;
   color: #ffffff;
   position: relative;
+  outline: none;
 }
 header .brand-name a::before {
   content: "";
-  height: 3px;
+  height: 2px;
   background-color: #ffffff;
   width: 100%;
   position: absolute;
   left: 0px;
-  bottom: 0px;
+  bottom: 11px;
 }
 
 header .navbar ul {
@@ -57,9 +59,9 @@ header .navbar ul li {
   margin-left: 35px;
 }
 header .navbar ul li a {
-  font-size: 17px;
+  font-size: 19px;
   text-decoration: none;
-  line-height: 62px;
+  line-height: 55px;
   color: #ffffff;
   font-weight: 600;
   position: relative;
@@ -72,7 +74,7 @@ header .navbar ul li a::before {
   width: 0%;
   position: absolute;
   right: 0px;
-  bottom: -1px;
+  bottom: -2px;
   transition: all 0.5s ease;
 }
 header .navbar ul li a:hover::before {
@@ -93,13 +95,50 @@ header .navbar ul li a.active::before {
 /* HOME SECTION  */
 .home {
   min-height: 100vh;
-  background-image: url("/home/asd.jpg");
+  background-image: url("http://wallpapercave.com/wp/wp1904065.png");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   padding: 15px;
-  filter: grayscale(0.9);
+  /* filter: grayscale(0.9 ); */
+  /* background-color: #292929; */
+}
+.box {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+  margin: -4px;
+  border-radius: 2px;
+}
+.box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.box span:nth-child(3) {
+  animation-delay: -0.4s;
 }
 
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
 .home .full-screen {
   min-height: 100vh;
 }
@@ -137,6 +176,7 @@ header .navbar ul li a.active::before {
   font-weight: 300;
   margin: 0;
   padding: 0;
+  font-weight: 500;
   border-bottom: 2px solid white;
 
   /* background-color: #ffffff; */
@@ -388,6 +428,39 @@ header .navbar ul li a.active::before {
   right: 0;
   top: -30px;
 }
-.skills .skills-content .skill-box .skill-bar .skill-bar-in .wordpress {
+.skills .skills-content .skill-box .skill-bar .skill-bar-in .react {
   right: -85px;
 }
+@import "compass/css3";
+
+body {
+  background: black;
+}
+
+/* .arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
+} */
+
+/* .box {
+  max-width: 70vw;
+  padding: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  font-size: 30px;
+  line-height: 1.5;
+  transform: translateY(-50%);
+  perspective: 400px;
+}
+
+.source {
+  color: skyblue;
+  margin: 0 auto;
+} */
